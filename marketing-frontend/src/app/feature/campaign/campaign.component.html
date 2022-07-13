@@ -5,17 +5,17 @@
       </h2>
       <div class="grid ">
         <label for="">Promocion:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="number" placeholder="Ejemplo: 52,32" [(ngModel)]="currentCampaign.promocionId">
+        <input class="input input-bordered input-info w-full max-w-xs" type="number" placeholder="Ejemplo: 52,32" [(ngModel)]="currentCampaign.promocionId">
         <label for="">Medio Publicitario:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="text" [(ngModel)]="currentCampaign.medioPublicitar">
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentCampaign.medioPublicitar">
         <label for="">Fecha de Inicio:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.fechaInicio">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.fechaInicio">
         <label for="">Fecha de Finalización:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.fechaFinal">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.fechaFinal">
         <label for="">Fecha de creación:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.created">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.created">
         <label for="">Fecha de actualización:</label>
-        <input class="input input-bordered input-error w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.updated">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentCampaign.updated">
         <div class="form-control">
           <label class="label cursor-pointer justify-start">
             <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentCampaign.enable"/>
@@ -24,8 +24,8 @@
         </div>
       </div>
       <div class="card-actions justify-end">
-        <button class="btn btn-outline btn-error btn-sm" (click)="save()">Guardar</button>
-        <button class="btn btn-outline btn-primary btn-sm">Cancelar</button>
+        <button class="btn  btn-primary" (click)="save()">Guardar</button>
+        <button class="btn   btn-accent">Cancelar</button>
       </div>
     </div>
   </div>
