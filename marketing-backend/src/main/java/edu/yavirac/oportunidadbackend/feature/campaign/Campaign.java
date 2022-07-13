@@ -1,4 +1,4 @@
-package edu.yavirac.campaignbackend.campaign;
+package edu.yavirac.oportunidadbackend.feature.campaign;
 
 import java.util.Date;
 import org.springframework.data.annotation.Id;

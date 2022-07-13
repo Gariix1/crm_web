@@ -1,4 +1,4 @@
-package edu.yavirac.campaignbackend.campaign;
+package edu.yavirac.oportunidadbackend.feature.campaign;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
