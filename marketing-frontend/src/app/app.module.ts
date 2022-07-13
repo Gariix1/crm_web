@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { OportunidadComponent } from './feature/oportunidad/oportunidad.component';
 import { ProspectComponent } from './feature/prospect/prospect.component';
 import { CampaignComponent } from './feature/campaign/campaign.component';
+import { ProductosComponent } from './feature/productos/productos.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CampaignComponent } from './feature/campaign/campaign.component';
     AppComponent,
     OportunidadComponent,
     ProspectComponent,
-    CampaignComponent
+    CampaignComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
