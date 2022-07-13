@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OportunidadComponent } from './feature/oportunidad/oportunidad.component';
 import { ProspectComponent } from './feature/prospect/prospect.component';
+import { CampaignComponent } from './feature/campaign/campaign.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OportunidadComponent,
-    ProspectComponent
+    ProspectComponent,
+    CampaignComponent
   ],
   imports: [
     BrowserModule,
