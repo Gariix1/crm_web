@@ -1,0 +1,37 @@
+<div class="grid justify-center mt-4 gap-2">
+  <div class="card card-compact w-96 glass bg-base-100 shadow-2xl shadow-white">
+    <div class="card-body">
+      <h2 class="card-title justify-center font-bold uppercase">Crud de <span class="text-blue-500">Prospecto</span>
+      </h2>
+      <div class="grid ">
+        <label for="">Nombre :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentProspect.nombre">
+        <label for="">Identificacion :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" placeholder="Ejemplo: 52,32" [(ngModel)]="currentProspect.identificacion">
+        <label for="">Origen :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentProspect.origen">
+        <label for="">Telefono :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="number" [(ngModel)]="currentProspect.telefono">
+        <label for="">Direccion :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentProspect.direccion">
+        <label for="">Correo :</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="email" [(ngModel)]="currentProspect.correo">
+        <label for="">Fecha de creación:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentProspect.created">
+        <label for="">Fecha de actualización:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentProspect.updated">
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentProspect.enable"/>
+            <span class="label-text ml-4">Activo</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-actions justify-end">
+        <button class="btn  btn-primary" (click)="save()">Guardar</button>
+        <button class="btn   btn-accent">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
