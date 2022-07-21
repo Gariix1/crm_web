@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { OportunidadService } from './oportunidad.service';
-import { Oportunidad } from './oportunidad';
+import { OportunidadService } from '../oportunidad.service';
+import { Oportunidad } from '../oportunidad';
 
 @Component({
   selector: 'app-oportunidad',
@@ -18,7 +18,8 @@ export class OportunidadComponent implements OnInit {
     campaniaId: 0,
     created:new Date(),
     updated:new Date(),
-    enable: false
+    enable: true,
+    descripcion: ""
   };
 
   constructor(
@@ -52,7 +53,8 @@ export class OportunidadComponent implements OnInit {
           campaniaId: 0,
           created:new Date(),
           updated:new Date(),
-          enable: false
+          enable: true,
+          descripcion: ""
         }
       }
     )
@@ -68,4 +70,25 @@ export class OportunidadComponent implements OnInit {
     )
   }
 
+  /*
+  delete():void{
+    this.oportunidadService.deleteById(this.currentOportunidad.id)
+    .subscribe(
+      () => {
+        console.log("Registro eliminado");
+        this.currentOportunidad = {
+          oportunidadId: 0,
+          prospectoId: 0,
+          monto: 0.0 ,
+          etapaId: 0,
+          vendedorId: 0,
+          campaniaId: 0,
+          created:new Date(),
+          updated:new Date(),
+          enable: true,
+          descripcion: ""
+        };
+      }
+    )
+  }*/
 }

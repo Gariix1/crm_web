@@ -31,6 +31,6 @@ public class Oportunidad{
     private Date created;
     private Date updated;
     private boolean enable;
-
+    private String descripcion;
 
 }

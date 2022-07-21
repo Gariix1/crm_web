@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OportunidadService {
-    
+
     @Autowired
     OportunidadRepository oportunidadRepository;
 
@@ -30,5 +30,9 @@ public class OportunidadService {
 
     public List<Oportunidad>findAll(){
         return oportunidadRepository.findAll();
+    }
+
+    public List<Oportunidad> findByDescripcion(String term){
+        return oportunidadRepository.findByDescripcionLikeIgnoreCase(term);
     }
 }
