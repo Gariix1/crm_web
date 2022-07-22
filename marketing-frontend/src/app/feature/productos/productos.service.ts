@@ -27,4 +27,17 @@ export class ProductosService{
   public findById(productoId:number): Observable<Productos>{
     return this.http.get<Productos>(this.url+"/"+productoId, this.httpOptions);
   }
+
+  public deleteById(id: number): Observable<void>{
+    console.log(id);
+    return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
+  }
+
+  public findAll():Observable<Productos[]>{
+    return this.http.get<Productos[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByNombre(term: string):Observable<Productos[]>{
+    return this.http.get<Productos[]>(this.url+"/findByNombre/"+term, this.httpOptions);
+  }
 }

@@ -40,8 +40,13 @@ public class ProductosController {
         productosService.deleteById(productoId);
     }
 
-    @GetMapping("/all")
-    public List<Productos>findAll(){
+    @GetMapping("/findAll")
+    public List findAll(){
         return productosService.findAll();
+    }
+
+    @GetMapping("/findByNombre/{term}")
+    public List<Productos> findByName(@PathVariable String term){
+        return productosService.findByName(term+"%"); 
     }
 }
