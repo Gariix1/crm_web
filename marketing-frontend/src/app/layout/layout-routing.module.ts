@@ -1,23 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CampaignComponent } from '../feature/campaign/campaign.component';
-<<<<<<< HEAD
-import { ProspectComponent } from '../feature/prospect/prospect.component';
-=======
-import { OportunidadComponent } from '../feature/oportunidad/oportunidad.component';
 import { ProspectComponent } from '../feature/prospect/form/prospect.component';
->>>>>>> 043f0a31ce2efc82b5ac3c1c01d91c4a8188c745
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
 import { ProductosComponent } from '../feature/productos/productos.component';
 import { PersonComponent } from '../feature/person/form/person.component';
 import { PersonListComponent } from '../feature/person/list/person-list.component';
-<<<<<<< HEAD
 import { ListComponent } from '../feature/oportunidad/list/list.component';
 import { OportunidadComponent } from '../feature/oportunidad/form/oportunidad.component';
-=======
 import { ProspectListComponent } from '../feature/prospect/prospect-list/prospect-list.component';
->>>>>>> 043f0a31ce2efc82b5ac3c1c01d91c4a8188c745
 
 const routes: Routes = [
   {
