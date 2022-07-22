@@ -7,6 +7,8 @@ import { MainComponent } from './main/main.component';
 import { ProductosComponent } from '../feature/productos/productos.component';
 import { PersonComponent } from '../feature/person/form/person.component';
 import { PersonListComponent } from '../feature/person/list/person-list.component';
+import { ListComponent } from '../feature/oportunidad/list/list.component';
+import { OportunidadComponent } from '../feature/oportunidad/form/oportunidad.component';
 
 const routes: Routes = [
   {
@@ -37,10 +39,9 @@ const routes: Routes = [
   {path: 'person-form/:id', component: PersonComponent}, */
 
       //oportunidad
-      /*{ path: 'oportunidad', component: OportunidadComponent },
-       {path: 'oportunidad-list', component:ListComponent},
-  {path: 'oportunidad-form', component:OportunidadComponent},
-  {path: 'oportunidad-form/:id', component:OportunidadComponent} */
+      {path: 'oportunidad-list', component:ListComponent},
+      {path: 'oportunidad-form', component:OportunidadComponent},
+      {path: 'oportunidad-form/:id', component:OportunidadComponent} 
     ],
   },
 

@@ -1,7 +1,7 @@
 <app-oportunidad-toolbar [item]="currentOportunidad.descripcion"></app-oportunidad-toolbar>
 
 <div class="grid justify-center mt-4 gap-2">
-  <div class="card card-compact w-96 bg-base-100 shadow-2xl shadow-zinc-700">
+  <div class="card card-compact w-96 bg-base-100 glass shadow-2xl shadow-zinc-700">
     <div class="card-body">
       <h2 class="card-title justify-center font-bold uppercase">CRUD DE<span class="text-cyan-500">OPORTUNIDAD</span>
       </h2>
@@ -27,7 +27,6 @@
             <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentOportunidad.enable">
             <span class="label-text ml-4">Activo</span>
           </label>
-          <app-prospect></app-prospect>
         </div>
       </div>
       <div class="card-actions justify-end">

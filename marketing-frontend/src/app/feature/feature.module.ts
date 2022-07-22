@@ -6,13 +6,25 @@ import { PersonToolbarComponent } from './person/toolbar/person-toolbar.componen
 import { FormsModule } from '@angular/forms';
 import { PersonComponent } from './person/form/person.component';
 import { PersonListComponent } from './person/list/person-list.component';
+import { ListComponent } from './oportunidad/list/list.component';
+import { OportunidadToolbarComponent } from './oportunidad/toolbar/oportunidad-toolbar.component';
+import { OportunidadComponent } from './oportunidad/form/oportunidad.component';
+import { CampaignComponent } from './campaign/campaign.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ProspectComponent } from './prospect/prospect.component';
 
 @NgModule({
   declarations: [
 
     PersonComponent,
     PersonToolbarComponent,
-    PersonListComponent
+    PersonListComponent,
+    ListComponent,
+    OportunidadToolbarComponent,
+    OportunidadComponent,
+    CampaignComponent,
+    ProductosComponent,
+    ProspectComponent
   ],
   imports: [
     CommonModule,

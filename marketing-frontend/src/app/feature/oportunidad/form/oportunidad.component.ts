@@ -20,7 +20,7 @@ export class OportunidadComponent implements OnInit {
     updated:new Date(),
     enable: true,
     descripcion: ""
-  };
+  }
 
   constructor(
     private oportunidadService: OportunidadService,

@@ -7,15 +7,13 @@ import { AppComponent } from './app.component';
 import { ProspectComponent } from './feature/prospect/prospect.component';
 import { CampaignComponent } from './feature/campaign/campaign.component';
 import { ProductosComponent } from './feature/productos/productos.component';
+import { OportunidadComponent } from './feature/oportunidad/form/oportunidad.component';
 
 
 @NgModule({
   declarations: [
 
-    AppComponent,
-    ProspectComponent,
-    CampaignComponent,
-    ProductosComponent
+    AppComponent
 
   ],
   imports: [
