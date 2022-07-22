@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { OportunidadService } from './oportunidad.service';
-import { Oportunidad } from './oportunidad';
+import { ActivatedRoute, Router } from '@angular/router';
+import { OportunidadService } from '../oportunidad.service';
+import { Oportunidad } from '../oportunidad';
 
 @Component({
   selector: 'app-oportunidad',
@@ -9,21 +9,12 @@ import { Oportunidad } from './oportunidad';
 })
 export class OportunidadComponent implements OnInit {
 
-  currentOportunidad: Oportunidad = {
-    oportunidadId: 0,
-    prospectoId: 0,
-    monto: 0.0 ,
-    etapaId: 0,
-    vendedorId: 0,
-    campaniaId: 0,
-    created:new Date(),
-    updated:new Date(),
-    enable: false
-  };
+  currentOportunidad: Oportunidad = this.resetPerson();
 
   constructor(
     private oportunidadService: OportunidadService,
-    private activedRoute: ActivatedRoute
+    private activedRoute: ActivatedRoute,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -43,17 +34,8 @@ export class OportunidadComponent implements OnInit {
     .subscribe(
       (response) => {
         console.log("registro guardado");
-        this.currentOportunidad = {
-          oportunidadId: 0,
-          prospectoId: 0,
-          monto: 0.0 ,
-          etapaId: 0,
-          vendedorId: 0,
-          campaniaId: 0,
-          created:new Date(),
-          updated:new Date(),
-          enable: false
-        }
+        this.currentOportunidad = this.resetPerson();
+        this.route.navigate(['/layout/oportunidad-list']);
       }
     )
   }
@@ -68,4 +50,30 @@ export class OportunidadComponent implements OnInit {
     )
   }
 
+  resetPerson(){
+    return this.currentOportunidad = {
+      oportunidadId: 0,
+      prospectoId: 0,
+      monto: 0.0 ,
+      etapaId: 0,
+      vendedorId: 0,
+      campaniaId: 0,
+      created:new Date(),
+      updated:new Date(),
+      enable: true,
+      descripcion: "",
+      productos: []
+    }
+  }
+
+  /*
+  delete():void{
+    this.oportunidadService.deleteById(this.currentOportunidad.id)
+    .subscribe(
+      () => {
+        console.log("Registro eliminado");
+        this.currentOportunidad = this.resetPerson();
+      }
+    )
+  }*/
 }
