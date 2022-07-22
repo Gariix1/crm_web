@@ -1,3 +1,5 @@
+import { Productos } from "../productos/productos";
+
 export interface Oportunidad {
   oportunidadId: number,
   prospectoId: number,
@@ -8,6 +10,8 @@ export interface Oportunidad {
   created: Date,
   updated: Date,
   enable: boolean,
-  descripcion: string
+  descripcion: string,
+
+  productos: Productos[]
 
 }

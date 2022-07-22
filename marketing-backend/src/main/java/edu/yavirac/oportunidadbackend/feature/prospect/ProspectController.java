@@ -45,7 +45,7 @@ public class ProspectController {
    
   }
 
-  @GetMapping("/all")
+  @GetMapping("/findAll")
   public List <Prospect> findAll() {
       return prospectService.findAll();
   }

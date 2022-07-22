@@ -7,28 +7,57 @@
       </h2>
       <div class="grid ">
         <label for="">Descripcion</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="text" [(ngModel)]="currentOportunidad.descripcion">
-        <label for="">Prospecto:</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="number" [(ngModel)]="currentOportunidad.prospectoId">
+        <input class="input input-bordered input-accent w-full max-w-xs" type="text"
+          [(ngModel)]="currentOportunidad.descripcion">
         <label for="">Monto:</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="number" [(ngModel)]="currentOportunidad.monto">
+        <input class="input input-bordered input-accent w-full max-w-xs" type="number"
+          [(ngModel)]="currentOportunidad.monto">
         <label for="">Etapa:</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="number" [(ngModel)]="currentOportunidad.etapaId">
+        <input class="input input-bordered input-accent w-full max-w-xs" type="number"
+          [(ngModel)]="currentOportunidad.etapaId">
         <label for="">Vendedor:</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="number" [(ngModel)]="currentOportunidad.vendedorId">
+        <input class="input input-bordered input-accent w-full max-w-xs" type="number"
+          [(ngModel)]="currentOportunidad.vendedorId">
         <label for="">Campaña:</label>
-        <input class="input input-bordered input-accent w-full max-w-xs" type="number" [(ngModel)]="currentOportunidad.campaniaId">
+        <input class="input input-bordered input-accent w-full max-w-xs" type="number"
+          [(ngModel)]="currentOportunidad.campaniaId">
         <label for="">Fecha de creación:</label>
-        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentOportunidad.created">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date"
+          [(ngModel)]="currentOportunidad.created">
         <label for="">Fecha de actualización:</label>
-        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentOportunidad.updated">
+        <input class="input input-bordered input-info w-full max-w-xs" type="date"
+          [(ngModel)]="currentOportunidad.updated">
         <div class="form-control">
           <label class="label cursor-pointer justify-start">
             <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentOportunidad.enable">
             <span class="label-text ml-4">Activo</span>
           </label>
         </div>
+        <app-prospect-combobox [idInput]="currentOportunidad.prospectoId"
+          (currentProspectId)="currentOportunidad.prospectoId = $event"></app-prospect-combobox>
       </div>
+
+      <div class="divider my-0">
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="table table-compact w-full">
+          <thead>
+            <tr>
+              <th>Producto Relacionado</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="divider my-0">
+      </div>
+
       <div class="card-actions justify-end">
         <button class="btn btn-accent btn-sm" (click)="save()">Guardar</button>
         <button class="btn btn-info btn-sm">Cancelar</button>

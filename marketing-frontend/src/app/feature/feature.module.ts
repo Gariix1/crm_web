@@ -12,6 +12,7 @@ import { OportunidadComponent } from './oportunidad/form/oportunidad.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ProspectComponent } from './prospect/prospect.component';
+import { ProspectComboboxComponent } from './prospect/combobox/prospect-combobox.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProspectComponent } from './prospect/prospect.component';
     OportunidadComponent,
     CampaignComponent,
     ProductosComponent,
-    ProspectComponent
+    ProspectComponent,
+    ProspectComboboxComponent
   ],
   imports: [
     CommonModule,
