@@ -52,9 +52,9 @@ public class ProspectController {
         return prospectService.findAll();
     }
 
-    @GetMapping("/findByName/{term}")
+     /* @GetMapping("/findByName/{term}")
     public List<Prospect> findByName(@PathVariable String term){
         return prospectService.findByName(term+"%");
-    }
+    }  */
   
 }

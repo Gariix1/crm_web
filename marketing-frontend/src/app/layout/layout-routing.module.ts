@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'prospect', component: ProspectComponent },
       {path: 'prospect-list', component: ProspectListComponent},
       {path: 'prospect-form', component: ProspectComponent},
-      {path: 'pprospect-form/:id', component: ProspectComponent},
+      {path: 'prospect-form/:id', component: ProspectComponent},
 
 
       //campaign
