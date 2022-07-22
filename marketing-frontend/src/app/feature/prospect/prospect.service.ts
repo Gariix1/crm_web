@@ -27,4 +27,17 @@ export class ProspectService {
   public findById(prospectId:number): Observable<Prospect>{
     return this.http.get<Prospect>(this.url+"/"+prospectId, this.httpOptions);
   }
+
+  public deleteById(id: number): Observable<void>{
+    console.log(id);
+    return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
+  }
+
+  public findAll():Observable<Prospect[]>{
+    return this.http.get<Prospect[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByName(term: string):Observable<Prospect[]>{
+    return this.http.get<Prospect[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
 }

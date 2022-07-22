@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CampaignComponent } from '../feature/campaign/form/campaign.component';
 import { OportunidadComponent } from '../feature/oportunidad/oportunidad.component';
-import { ProspectComponent } from '../feature/prospect/prospect.component';
+import { ProspectComponent } from '../feature/prospect/form/prospect.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
 import { ProductosComponent } from '../feature/productos/productos.component';
 import { PersonComponent } from '../feature/person/form/person.component';
 import { PersonListComponent } from '../feature/person/list/person-list.component';
 import { CampaignListComponent } from '../feature/campaign/list/campaign-list.component';
+import { ProspectListComponent } from '../feature/prospect/prospect-list/prospect-list.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
       {path: 'person-form/:id', component: PersonComponent},
       //prospect
       { path: 'prospect', component: ProspectComponent },
+      {path: 'prospect-list', component: ProspectListComponent},
+      {path: 'prospect-form', component: ProspectComponent},
+      {path: 'prospect-form/:id', component: ProspectComponent},
 
 
       //campaign
