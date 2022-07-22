@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @RestController
 @RequestMapping("/api/prospect")
 @CrossOrigin({"*"})
@@ -46,8 +48,13 @@ public class ProspectController {
   }
 
   @GetMapping("/findAll")
-  public List <Prospect> findAll() {
-      return prospectService.findAll();
-  }
+    public List findAll(){
+        return prospectService.findAll();
+    }
+
+      @GetMapping("/findByName/{term}")
+    public List<Prospect> findByName(@PathVariable String term){
+        return prospectService.findByName(term+"%");
+    }  
   
 }
