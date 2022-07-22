@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProspectService } from './prospect.service';
-import { Prospect } from './prospect';
+import { ProspectService } from '../prospect.service';
+import { Prospect } from '../prospect';
 @Component({
   selector: 'app-prospect',
   templateUrl: './prospect.component.html',
