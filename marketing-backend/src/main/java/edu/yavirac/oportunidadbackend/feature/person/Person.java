@@ -12,5 +12,5 @@ public class Person {
     private long id;
     private String name;
     private String dni;
-    private Long cityId;
+    private boolean enable;
 }

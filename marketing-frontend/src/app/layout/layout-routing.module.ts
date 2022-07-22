@@ -16,12 +16,13 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       //dashboard
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'person', component: PersonComponent },
+      {path: 'dashboard', component: DashboardComponent },
+      {path: 'dashboard', component: DashboardComponent },
       {path: 'person-list', component: PersonListComponent},
       {path: 'person-form', component: PersonComponent},
       {path: 'person-form/:id', component: PersonComponent},
+
+
       //prospect
       { path: 'prospect', component: ProspectComponent },
 
@@ -29,8 +30,8 @@ const routes: Routes = [
       //campaign
       { path: 'campaign', component: CampaignComponent },
       /*{path: 'campaign-list', component: CampaignListComponent},
-  {path: 'campaign-form', component: CampaignComponent},
-  {path: 'campaign-form/:id', component: CampaignComponent},*/
+        {path: 'campaign-form', component: CampaignComponent},
+        {path: 'campaign-form/:id', component: CampaignComponent},*/
 
       //productos
       { path: 'productos', component: ProductosComponent },
@@ -41,7 +42,7 @@ const routes: Routes = [
       //oportunidad
       {path: 'oportunidad-list', component:ListComponent},
       {path: 'oportunidad-form', component:OportunidadComponent},
-      {path: 'oportunidad-form/:id', component:OportunidadComponent} 
+      {path: 'oportunidad-form/:id', component:OportunidadComponent}
     ],
   },
 
