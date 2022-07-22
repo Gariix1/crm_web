@@ -5,9 +5,10 @@ import { OportunidadComponent } from '../feature/oportunidad/oportunidad.compone
 import { ProspectComponent } from '../feature/prospect/prospect.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main/main.component';
-import { ProductosComponent } from '../feature/productos/productos.component';
 import { PersonComponent } from '../feature/person/form/person.component';
 import { PersonListComponent } from '../feature/person/list/person-list.component';
+import { ProductosComponent } from '../feature/productos/form/productos.component';
+import { ProductosListComponent } from '../feature/productos/productos-list/productos-list.component';
 
 const routes: Routes = [
   {
@@ -33,9 +34,9 @@ const routes: Routes = [
 
       //productos
       { path: 'productos', component: ProductosComponent },
-      /* {path: 'person-list', component: PersonListComponent},
-      {path: 'person-form', component: PersonComponent},
-  {path: 'person-form/:id', component: PersonComponent}, */
+      {path: 'productos-list', component: ProductosListComponent},
+      {path: 'productos-form', component: ProductosComponent},
+      {path: 'productos-form/:id', component: ProductosComponent},
 
       //oportunidad
       { path: 'oportunidad', component: OportunidadComponent },
