@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-person-toolbar',
-  templateUrl: './person-toolbar.component.html'
+  selector: 'app-campaign-toolbar',
+  templateUrl: './campaign-toolbar.component.html'
 })
-export class PersonToolbarComponent implements OnInit {
+export class CampaignToolbarComponent implements OnInit {
 
   constructor() { }
 

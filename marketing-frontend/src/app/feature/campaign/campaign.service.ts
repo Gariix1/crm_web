@@ -27,4 +27,19 @@ export class CampaignService{
   public findById(campaniaId:number): Observable<Campaign>{
     return this.http.get<Campaign>(this.url+"/"+campaniaId, this.httpOptions);
   }
+
+  public deleteById(id: number): Observable<void>{
+    console.log(id);
+    return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
+  }
+
+  public findAll():Observable<Campaign[]>{
+    return this.http.get<Campaign[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByName(term: string):Observable<Campaign[]>{
+    return this.http.get<Campaign[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
+
+
 }

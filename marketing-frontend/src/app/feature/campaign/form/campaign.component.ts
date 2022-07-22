@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CampaignService } from './campaign.service';
-import { Campaign } from './campaign';
+import { CampaignService } from '../campaign.service';
+import { Campaign } from '../campaign';
 
 @Component({
   selector: 'app-campaign',
@@ -24,6 +24,8 @@ export class CampaignComponent implements OnInit {
     private campaignService: CampaignService,
     private activedRoute: ActivatedRoute
   ) { }
+
+  campaigns: Campaign[] = [];
 
   ngOnInit(): void {
     this.activedRoute.paramMap.subscribe(
@@ -65,5 +67,24 @@ export class CampaignComponent implements OnInit {
       }
     )
   }
+  findAll():void {
+    this.campaignService.findAll().subscribe(
+      (response) => {
+        this.campaigns = response;
+      }
+    );
+  }
 
+  findByName(term: string){
+    if (term.length===0){
+      this.findAll();
+    }
+
+    if (term.length>=2){
+      this.campaignService.findByName(term).subscribe(
+        (response) => this.campaigns = response
+      )
+    }
+
+  }
 }
