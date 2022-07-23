@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
+
 @RestController
 @CrossOrigin({"*"})
 @RequestMapping("/api/oportunidad")
@@ -40,9 +41,15 @@ public class OportunidadController {
         oportunidadService.deleteById(oportunidadId);
     }
 
-    @GetMapping("/all")
-    public List<Oportunidad>findAll(){
+    @GetMapping("/findAll")
+    public List findAll(){
         return oportunidadService.findAll();
     }
+
+    @GetMapping("/findByDescripcion/{term}")
+    public List<Oportunidad>findByDescripcion(@PathVariable String term) {
+        return oportunidadService.findByDescripcion(term+"%");
+    }
+    
 }
 
