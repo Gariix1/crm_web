@@ -6,11 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a9a664416dba71c2deb35801768b699f388dc3d3
 @NgModule({
   declarations: [
 
