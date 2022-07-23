@@ -1,9 +1,13 @@
 package edu.yavirac.oportunidadbackend.feature.campaign;
 
 import java.util.Date;
+
 import org.springframework.data.annotation.Id;
+
 import org.springframework.data.relational.core.mapping.Column;
+
 import org.springframework.data.relational.core.mapping.Table;
+
 import lombok.Data;
 
 @Data
@@ -28,6 +32,6 @@ public class Campaign{
 
     private Date created;
     private Date updated;
-    private boolean enable;
+    private Boolean enable;
 
 }

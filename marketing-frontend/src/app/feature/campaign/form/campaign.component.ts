@@ -81,7 +81,7 @@ export class CampaignComponent implements OnInit {
     }
 
     if (term.length>=2){
-      this.campaignService.findByName(term).subscribe(
+      this.campaignService.findByMedioPublicitar(term).subscribe(
         (response) => this.campaigns = response
       )
     }

@@ -21,7 +21,6 @@ public class PersonController {
 
     @Autowired
     PersonService personService;
-
 //Create
     @PostMapping("/save")
     public Person save(@RequestBody Person person) {
@@ -45,7 +44,7 @@ public class PersonController {
     }
 
     @GetMapping("/findAll")
-    public List findAll(){
+    public List <Person> findAll(){
         return personService.findAll();
     }
 
@@ -53,5 +52,4 @@ public class PersonController {
     public List<Person> findByName(@PathVariable String term){
         return personService.findByName(term+"%");
     }
-    
 }

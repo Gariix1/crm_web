@@ -26,13 +26,13 @@ export class CampaignListComponent implements OnInit {
     );
   }
 
-  findByName(term: string){
+  findByMedioPublicitar(term: string){
     if (term.length===0){
       this.findAll();
     }
 
     if (term.length>=2){
-      this.campaignService.findByName(term).subscribe(
+      this.campaignService.findByMedioPublicitar(term).subscribe(
         (response) => this.campaigns = response
       )
     }

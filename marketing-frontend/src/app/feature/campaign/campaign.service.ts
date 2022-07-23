@@ -37,8 +37,8 @@ export class CampaignService{
     return this.http.get<Campaign[]>(this.url+"/findAll", this.httpOptions);
   }
 
-  public findByName(term: string):Observable<Campaign[]>{
-    return this.http.get<Campaign[]>(this.url+"/findByName/"+term, this.httpOptions);
+  public findByMedioPublicitar(term: string):Observable<Campaign[]>{
+    return this.http.get<Campaign[]>(this.url+"/findByMedioPublicitar/"+term, this.httpOptions);
   }
 
 
