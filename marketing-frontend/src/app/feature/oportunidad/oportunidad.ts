@@ -11,7 +11,6 @@ export interface Oportunidad {
   updated: Date,
   enable: boolean,
   descripcion: string,
-
   productos: Productos[]
 
 }

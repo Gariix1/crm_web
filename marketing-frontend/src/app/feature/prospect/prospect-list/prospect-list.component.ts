@@ -25,13 +25,13 @@ export class ProspectListComponent implements OnInit {
     );
   }
 
-  findByName(term: string){
+  findByNombre(term: string){
     if (term.length===0){
       this.findAll();
     }
 
     if (term.length>=2){
-      this.prospectService.findByName(term).subscribe(
+      this.prospectService.findByNombre(term).subscribe(
         (response) => this.prospects = response
       )
     }

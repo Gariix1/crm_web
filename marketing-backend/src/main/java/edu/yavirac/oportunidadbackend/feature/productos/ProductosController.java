@@ -25,7 +25,7 @@ public class ProductosController {
         return productosService.save(productos);
     }
 
-    @GetMapping("/{productoId}")
+    @GetMapping("/findById/{productoId}")
     public Productos findById(@PathVariable long productoId) {
         return productosService.findById(productoId);
     }

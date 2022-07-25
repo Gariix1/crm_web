@@ -17,6 +17,7 @@ import { OportunidadToolbarComponent } from './oportunidad/toolbar/oportunidad-t
 import { ProspectComboboxComponent } from './prospect/combobox/prospect-combobox.component';
 import { ProspectListComponent } from './prospect/prospect-list/prospect-list.component';
 import { ProspectToolbarComponent } from './prospect/prospect-toolbar/prospect-toolbar.component';
+import { ProductoSearchComponent } from './productos/search/producto-search.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProspectToolbarComponent } from './prospect/prospect-toolbar/prospect-t
     ProspectComponent,
     ProspectListComponent,
     ProspectToolbarComponent,
+    ProductoSearchComponent,
 
   ],
   imports: [

@@ -25,7 +25,7 @@ export class ProductosService{
 
   //read
   public findById(productoId:number): Observable<Productos>{
-    return this.http.get<Productos>(this.url+"/"+productoId, this.httpOptions);
+    return this.http.get<Productos>(this.url+"/findById/"+productoId, this.httpOptions);
   }
 
   public deleteById(id: number): Observable<void>{
@@ -40,4 +40,6 @@ export class ProductosService{
   public findByNombre(term: string):Observable<Productos[]>{
     return this.http.get<Productos[]>(this.url+"/findByNombre/"+term, this.httpOptions);
   }
+
+
 }
