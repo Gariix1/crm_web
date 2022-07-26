@@ -61,8 +61,8 @@ export class ProspectComponent implements OnInit {
     )
   }
 
-  findById(prospectId: number): void{
-    this.prospectService.findById(prospectId)
+  findById(prospectoId: number): void{
+    this.prospectService.findById(prospectoId)
     .subscribe(
       (response: Prospect) => {
         console.log("registro encontrado");

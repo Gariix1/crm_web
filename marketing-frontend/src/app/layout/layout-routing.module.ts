@@ -33,8 +33,8 @@ const routes: Routes = [
       //campaign
       { path: 'campaign', component: CampaignComponent },
       {path: 'campaign-list', component: CampaignListComponent},
-  {path: 'campaign-form', component: CampaignComponent},
-  {path: 'campaign-form/:id', component: CampaignComponent},
+      {path: 'campaign-form', component: CampaignComponent},
+      {path: 'campaign-form/:id', component: CampaignComponent},
 
       //productos
       { path: 'productos', component: ProductosComponent },

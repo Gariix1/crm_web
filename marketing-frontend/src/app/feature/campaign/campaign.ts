@@ -1,3 +1,5 @@
+import { CampaignProspect } from "./CampaignProspect"
+
 export interface Campaign {
   campaniaId: number,
   promocionId: number,
@@ -7,5 +9,8 @@ export interface Campaign {
   created: Date,
   updated: Date,
   enable: boolean
+  creadoPor: number,
+  prospects: CampaignProspect[]
+
 
 }
