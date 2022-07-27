@@ -1,13 +1,13 @@
 package edu.yavirac.oportunidadbackend.feature.campaign;
-
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 
 import org.springframework.data.annotation.Id;
-
 import org.springframework.data.relational.core.mapping.Column;
-
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
-
 import lombok.Data;
 
 @Data
@@ -33,5 +33,12 @@ public class Campaign{
     private Date created;
     private Date updated;
     private Boolean enable;
+
+    @Column("creado_por")
+    private int creadoPor;
+
+    @MappedCollection(idColumn = "campania_id")
+    private Set<CampaignProspect> prospects = new HashSet<>();
+  
 
 }

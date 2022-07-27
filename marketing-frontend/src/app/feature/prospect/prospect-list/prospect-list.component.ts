@@ -25,7 +25,7 @@ export class ProspectListComponent implements OnInit {
     );
   }
 
-  findByName(term: string){
+  findByNombre(term: string){
     if (term.length===0){
       this.findAll();
     }

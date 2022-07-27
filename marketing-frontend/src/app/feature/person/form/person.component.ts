@@ -58,3 +58,7 @@ export class PersonComponent implements OnInit {
 
 
 }
+
+
+/* id: 0,
+name: '' */

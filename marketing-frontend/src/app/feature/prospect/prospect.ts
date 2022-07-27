@@ -1,4 +1,6 @@
+import { ProspectReferences } from './ProspectReferences';
 export interface Prospect {
+
   prospectoId: number,
   nombre: string,
   identificacion: string,
@@ -8,6 +10,10 @@ export interface Prospect {
   correo: string,
   created: Date,
   updated:Date,
-  enable:boolean
+  enable:boolean,
+  creadoPor:number,
+  references: ProspectReferences[]
+
+
 
 }
