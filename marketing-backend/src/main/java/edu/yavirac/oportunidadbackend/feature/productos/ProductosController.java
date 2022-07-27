@@ -25,7 +25,7 @@ public class ProductosController {
         return productosService.save(productos);
     }
 
-    @GetMapping("/{productoId}")
+    @GetMapping("/findById/{productoId}")
     public Productos findById(@PathVariable long productoId) {
         return productosService.findById(productoId);
     }
@@ -45,7 +45,7 @@ public class ProductosController {
         return productosService.findAll();
     }
 
-    @GetMapping("/findByNombre/{term}")
+    @GetMapping("/findByName/{term}")//no tocar por que esto busca el producto,alado de las migas de pan
     public List<Productos> findByName(@PathVariable String term){
         return productosService.findByName(term+"%"); 
     }

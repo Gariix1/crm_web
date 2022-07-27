@@ -6,45 +6,33 @@ import { FormsModule } from '@angular/forms';
 
 import { PersonListComponent } from './person/list/person-list.component';
 import { PersonComponent } from './person/form/person.component';
+import { PersonComboboxComponent } from './person/person-combobox/person-combobox.component';
 
 import { ProductosToolbarComponent } from './productos/productos-toolbar/productos-toolbar.component';
 import { ProductosListComponent } from './productos/productos-list/productos-list.component';
 import { ProductosComponent } from './productos/form/productos.component';
-
-import { ProspectComponent } from './prospect/form/prospect.component';
-import { ProspectComboboxComponent } from './prospect/combobox/prospect-combobox.component';
-import { ProspectListComponent } from './prospect/prospect-list/prospect-list.component';
-import { ProspectToolbarComponent } from './prospect/prospect-toolbar/prospect-toolbar.component';
-
-import { OportunidadComponent } from './oportunidad/form/oportunidad.component';
-import { ListComponent } from './oportunidad/list/list.component';
-import { OportunidadToolbarComponent } from './oportunidad/toolbar/oportunidad-toolbar.component';
+import { ProductosSearchComponent } from './productos/search/productos-search.component';
 import { CampaignComponent } from './campaign/form/campaign.component';
-
+import { OportunidadComponent } from './oportunidad/form/oportunidad.component';
+import { ProspectComponent } from './prospect/form/prospect.component';
 
 
 @NgModule({
   declarations: [
 
     PersonComponent,
-    PersonToolbarComponent,
     PersonListComponent,
+    PersonComboboxComponent,
+    PersonToolbarComponent,
 
     ProductosComponent,
-    ProductosToolbarComponent,
     ProductosListComponent,
+    ProductosSearchComponent,
+    ProductosToolbarComponent,
 
-    CampaignComponent,
-
-
-    ListComponent,//oportunidad
-    OportunidadToolbarComponent,
     OportunidadComponent,
-
-    ProspectComboboxComponent,
     ProspectComponent,
-    ProspectListComponent,
-    ProspectToolbarComponent,
+    CampaignComponent
 
   ],
   imports: [

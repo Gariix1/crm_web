@@ -1,3 +1,5 @@
+import { ProductosRelacionados } from "./ProductosRelacionados";
+
 export interface Productos {
   productoId: number,
   nombre: string,
@@ -6,5 +8,7 @@ export interface Productos {
   modelo: string,
   created: Date,
   updated: Date,
-  enable: boolean
+  enable: boolean,
+  personsId: number,
+  relacionados: ProductosRelacionados[]
 }

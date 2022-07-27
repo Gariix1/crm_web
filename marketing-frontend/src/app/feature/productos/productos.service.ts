@@ -8,15 +8,17 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class ProductosService{
 
+
+
+  constructor(
+    private http: HttpClient
+  ) { }
+
   private httpOptions = {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
   private url:string = "http://localhost:8090/api/productos"
-
-  constructor(
-    private http: HttpClient
-  ) { }
 
   //create
   public save(productos:Productos): Observable<Productos>{
@@ -25,7 +27,7 @@ export class ProductosService{
 
   //read
   public findById(productoId:number): Observable<Productos>{
-    return this.http.get<Productos>(this.url+"/"+productoId, this.httpOptions);
+    return this.http.get<Productos>(this.url+"/findById/"+productoId, this.httpOptions);
   }
 
   public deleteById(id: number): Observable<void>{
@@ -38,6 +40,6 @@ export class ProductosService{
   }
 
   public findByNombre(term: string):Observable<Productos[]>{
-    return this.http.get<Productos[]>(this.url+"/findByNombre/"+term, this.httpOptions);
+    return this.http.get<Productos[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
 }

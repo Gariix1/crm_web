@@ -33,6 +33,6 @@ public class ProductosService {
     }
 
     public List<Productos> findByName(String term){
-        return productosRepository.findByNombreLikeIgnoreCase(term);
+        return productosRepository.findByNombreLikeIgnoreCase(term+"%");
     }
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Productos } from '../productos';
 import { ProductosService } from '../productos.service';
+import { ProductosRelacionados } from '../ProductosRelacionados';
 
 @Component({
   selector: 'app-productos',
@@ -9,20 +10,13 @@ import { ProductosService } from '../productos.service';
 })
 export class ProductosComponent implements OnInit {
 
-  currentProductos: Productos = {
-    productoId: 0,
-    nombre: "" ,
-    descripcion: "",
-    marca: "",
-    modelo : "",
-    created:new Date(),
-    updated:new Date(),
-    enable: false
-  };
+  currentProductos: Productos = this.resetProductos();
 
   constructor(
     private productosService: ProductosService,
-    private activedRoute: ActivatedRoute
+    private activedRoute: ActivatedRoute,
+    private route:Router,
+
   ) { }
 
   ngOnInit(): void {
@@ -42,16 +36,9 @@ export class ProductosComponent implements OnInit {
     .subscribe(
       (response) => {
         console.log("registro guardado");
-        this.currentProductos = {
-          productoId: 0,
-          nombre: "" ,
-          descripcion: "",
-          marca: "",
-          modelo : "",
-          created:new Date(),
-          updated:new Date(),
-          enable: false
-        };
+        this.currentProductos = this.resetProductos();
+        this.route.navigate(['/layaout.person-list']);
+
       }
     )
   }
@@ -61,9 +48,48 @@ export class ProductosComponent implements OnInit {
     .subscribe(
       (response: Productos) => {
         console.log("registro encontrado");
-        this.currentProductos=response
+        this.currentProductos=response;
+        this.currentProductos.relacionados.forEach(
+          (item)=>{
+            this.productosService.findById(item.relacionId).subscribe(
+              (relacionados:Productos) => item.nombre = relacionados.nombre
+            )
+
+          }
+        )
       }
     )
   }
 
+  resetProductos(){
+    return this.currentProductos = {
+      productoId: 0,
+      nombre: "" ,
+      descripcion: "",
+      marca: "",
+      modelo : "",
+      created:new Date(),
+      updated:new Date(),
+      enable: false,
+      personsId: 0,
+      relacionados: []
+
+
+    };
+
+  }
+
+  onSelect(relacionados:Productos): void{
+    let productosrelacionados:ProductosRelacionados={productoId:this.currentProductos.productoId,
+      id:0,relacionId:relacionados.productoId,
+       nombre:relacionados.nombre};
+    this.currentProductos.relacionados.push(productosrelacionados)
+  }
+
+  removeProductos(relacionId: number){
+    this.currentProductos.relacionados =
+    this.currentProductos.relacionados.filter(
+      (item) => item.productoId != relacionId
+    )
+  }
 }
