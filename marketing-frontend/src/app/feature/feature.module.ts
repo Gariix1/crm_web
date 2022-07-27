@@ -14,6 +14,10 @@ import { ProspectComponent } from './prospect/form/prospect.component';
 import { OportunidadComponent } from './oportunidad/oportunidad.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { ProductosComponent } from './productos/productos.component';
+import { PersonComboboxComponent } from './person/person-combobox/person-combobox.component';
+import { ProspectSearchComponent } from './prospect/search/prospect-search.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { ProductosComponent } from './productos/productos.component';
     ProspectToolbarComponent,
     OportunidadComponent,
     CampaignComponent,
-    ProductosComponent
+    ProductosComponent,
+    PersonComboboxComponent,
+    ProspectSearchComponent,
+
 
   ],
   imports: [

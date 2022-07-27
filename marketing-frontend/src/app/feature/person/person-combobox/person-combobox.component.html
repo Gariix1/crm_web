@@ -1,0 +1,9 @@
+<select #personSelect class="select w-full max-w-xs select-accent" (change)="onChange(personSelect.value) ">
+  <option disabled selected>Seleccione la persona creadora</option>
+  <option *ngFor="let person of persones "
+  [value]="person.id"
+  [selected]="person.id === idInput"
+
+  >{{person.name}} </option>
+
+</select>

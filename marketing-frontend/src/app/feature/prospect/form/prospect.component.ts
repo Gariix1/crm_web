@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { ProspectService } from '../prospect.service';
 import { Prospect } from '../prospect';
+import { ProspectReferences } from './../ProspectReferences';
 @Component({
   selector: 'app-prospect',
   templateUrl: './prospect.component.html',
@@ -9,22 +10,12 @@ import { Prospect } from '../prospect';
 })
 export class ProspectComponent implements OnInit {
 
-  currentProspect: Prospect = {
-    prospectoId: 0,
-    nombre: "" ,
-    identificacion: "",
-    origen: "",
-    telefono: 0,
-    direccion:"",
-    correo:"",
-    created:new Date(),
-    updated:new Date(),
-    enable: false
-  };
+  currentProspect: Prospect = this.resetProspect();
 
   constructor(
     private prospectService: ProspectService,
-    private activedRoute: ActivatedRoute
+    private activedRoute: ActivatedRoute,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -45,18 +36,8 @@ export class ProspectComponent implements OnInit {
     .subscribe(
       (response) => {
         console.log("registro guardado");
-        this.currentProspect = {
-          prospectoId: 0,
-          nombre: "" ,
-          identificacion: "",
-          origen: "",
-          telefono: 0,
-          direccion:"",
-          correo:"",
-          created:new Date(),
-          updated:new Date(),
-          enable: false
-        }
+        this.currentProspect = this.resetProspect();
+        this.router.navigate(['/layout/prospect-list'])
       }
     )
   }
@@ -67,7 +48,57 @@ export class ProspectComponent implements OnInit {
       (response: Prospect) => {
         console.log("registro encontrado");
         this.currentProspect=response
+        this.currentProspect.references.forEach(
+          (item) => {
+            this.prospectService.findById(item.referenciaId).subscribe(
+              (auth:Prospect) => item.nombre=auth.nombre
+            )
+
+          }
+        )
       }
     )
   }
+
+  cancelar(){
+    this.router.navigate(['/layout/prospect-list'])
+  }
+
+
+  resetProspect(){
+    return this.currentProspect = {
+
+    prospectoId: 0,
+    nombre: "" ,
+    identificacion: "",
+    origen: "",
+    telefono: 0,
+    direccion:"",
+    correo:"",
+    created:new Date(),
+    updated:new Date(),
+    enable: false,
+    personId: 0,
+    references:[]
+
+    };
+  }
+
+  removeProspecto(prospectId: number){
+    this.currentProspect.references =
+    this.currentProspect.references.filter(
+      (item) => item.referenciaId != prospectId
+    )
+  }
+
+  onSelect(relacionados:Prospect): void{
+    let prospectosrelacionados:ProspectReferences={prospectoId:this.currentProspect.prospectoId,
+      prospectoReferenciasId:0,referenciaId:relacionados.prospectoId,
+       nombre:relacionados.nombre};
+    this.currentProspect.references.push(prospectosrelacionados)
+  }
+
+  
+
+
 }
