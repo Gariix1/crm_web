@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OportunidadService } from '../oportunidad.service';
 import { Oportunidad } from '../oportunidad';
+import { ProductosService } from '../../productos/productos.service';
+import { Productos } from '../../productos/productos';
 
 @Component({
   selector: 'app-oportunidad',
@@ -14,7 +16,8 @@ export class OportunidadComponent implements OnInit {
   constructor(
     private oportunidadService: OportunidadService,
     private activedRoute: ActivatedRoute,
-    private route: Router
+    private route: Router,
+    private productosService: ProductosService
   ) { }
 
   ngOnInit(): void {
@@ -45,7 +48,14 @@ export class OportunidadComponent implements OnInit {
     .subscribe(
       (response: Oportunidad) => {
         console.log("registro encontrado");
-        this.currentOportunidad=response
+        this.currentOportunidad=response;
+        this.currentOportunidad.productos.forEach(
+          (item) => {
+            this.productosService.findById(item.productoId).subscribe(
+              (producto:Productos) => item.nombre = producto.nombre
+            )
+          }
+        )
       }
     )
   }
@@ -64,6 +74,17 @@ export class OportunidadComponent implements OnInit {
       descripcion: "",
       productos: []
     }
+  }
+
+  onSelect(producto: Productos):void{
+    this.currentOportunidad.productos.push(producto);
+  }
+
+  removeProductos(oportunidadId: number){
+    this.currentOportunidad.productos =
+    this.currentOportunidad.productos.filter(
+      (item) => item.productoId != oportunidadId
+    )
   }
 
   /*

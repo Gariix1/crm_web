@@ -11,7 +11,9 @@ public class OportunidadProducto {
     @Id
     @Column("op_id")
     private long opId;
+    @Column("oportunidad_id")
     private Long oportunidadId;
+    @Column("producto_id")
     private Long productoId;
     
 

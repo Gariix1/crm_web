@@ -42,4 +42,6 @@ export class ProductosService{
   public findByNombre(term: string):Observable<Productos[]>{
     return this.http.get<Productos[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
+
+
 }
