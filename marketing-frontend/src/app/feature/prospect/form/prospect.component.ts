@@ -25,7 +25,7 @@ export class ProspectComponent implements OnInit {
   constructor(
     private prospectService: ProspectService,
     private activedRoute: ActivatedRoute
-  ) { }
+  ) {  }
 
   ngOnInit(): void {
 
