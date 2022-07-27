@@ -29,6 +29,7 @@ const routes: Routes = [
       //dashboard
       {path: 'dashboard', component: DashboardComponent },
       {path: 'dashboard', component: DashboardComponent },
+
       {path: 'person-list', component: PersonListComponent},
       {path: 'person-form', component: PersonComponent},
       {path: 'person-form/:id', component: PersonComponent},
@@ -44,10 +45,11 @@ const routes: Routes = [
       //campaign
       { path: 'campaign', component: CampaignComponent },
       {path: 'campaign-list', component: CampaignListComponent},
-  {path: 'campaign-form', component: CampaignComponent},
-  {path: 'campaign-form/:id', component: CampaignComponent},
+      {path: 'campaign-form', component: CampaignComponent},
+      {path: 'campaign-form/:id', component: CampaignComponent},
 
       //productos
+      { path: 'productos', component: ProductosComponent },
       {path: 'productos-list', component: ProductosListComponent},
       {path: 'productos-form', component: ProductosComponent},
       {path: 'productos-form/:id', component: ProductosComponent},

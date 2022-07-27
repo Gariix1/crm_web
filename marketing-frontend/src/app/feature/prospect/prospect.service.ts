@@ -37,15 +37,8 @@ export class ProspectService {
     return this.http.get<Prospect[]>(this.url+"/findAll", this.httpOptions);
   }
 
-
-<<<<<<< HEAD
   public findByName(term: string):Observable<Prospect[]>{
     return this.http.get<Prospect[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
-=======
-  public findByNombre(term: string):Observable<Prospect[]>{
-    return this.http.get<Prospect[]>(this.url+"/findByNombre/"+term, this.httpOptions);
-  }
 
->>>>>>> e359ec8ad6fcea358317e5707dbe82970e60d15c
 }

@@ -25,13 +25,13 @@ export class ProductosListComponent implements OnInit {
     );
   }
 
-  findByNombre(term: string){
+  findByName(term: string){
     if (term.length===0){
       this.findAll();
     }
 
     if (term.length>=2){
-      this.productosService.findByNombre(term).subscribe(
+      this.productosService.findByName(term).subscribe(
         (response) => this.productos = response
       )
     }

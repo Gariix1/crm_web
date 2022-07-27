@@ -21,7 +21,7 @@ export class ProductoSearchComponent implements OnInit {
 
   findByName(term: string):void{
     if (term.length>=1){
-      this.productosService.findByNombre(term).subscribe(
+      this.productosService.findByName(term).subscribe(
         (response) => this.productos = response
       )
     }

@@ -86,10 +86,10 @@ export class ProductosComponent implements OnInit {
     this.currentProductos.relacionados.push(productosrelacionados)
   }
 
-  removeProductos(relacionId: number){
+  removeProductos(productoId: number){
     this.currentProductos.relacionados =
     this.currentProductos.relacionados.filter(
-      (item) => item.productoId != relacionId
+      (item) => item.relacionId != productoId
     )
   }
 }

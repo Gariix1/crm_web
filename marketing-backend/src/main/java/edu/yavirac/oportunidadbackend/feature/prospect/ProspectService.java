@@ -33,7 +33,7 @@ public class ProspectService {
         return prospectRepository.findAll();
     }
 
-     public List<Prospect> findByNombre(String term){
+     public List<Prospect> findByName(String term){
         return prospectRepository.findByNombreLikeIgnoreCase(term);
     } 
 }

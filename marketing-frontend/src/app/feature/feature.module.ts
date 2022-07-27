@@ -24,6 +24,8 @@ import { ProspectComponent } from './prospect/form/prospect.component';;
 import { ProspectComboboxComponent } from './prospect/combobox/prospect-combobox.component';
 import { ProspectListComponent } from './prospect/prospect-list/prospect-list.component';
 import { ProspectToolbarComponent } from './prospect/prospect-toolbar/prospect-toolbar.component';
+import { CampaignListComponent } from './campaign/list/campaign-list.component';
+import { CampaignToolbarComponent } from './campaign/toolbar/campaign-toolbar.component';
 
 
 
@@ -50,7 +52,10 @@ import { ProspectToolbarComponent } from './prospect/prospect-toolbar/prospect-t
     ProspectToolbarComponent,
     ProspectComboboxComponent,
 
-    CampaignComponent
+    CampaignComponent,
+    CampaignListComponent,
+    CampaignToolbarComponent
+
 
   ],
   imports: [

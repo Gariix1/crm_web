@@ -21,7 +21,7 @@ productosrelacionadosies: Productos[]= [];
   findByName(term: string): void{
 
     if (term.length>=2){
-      this.productosService.findByNombre(term).subscribe(
+      this.productosService.findByName(term).subscribe(
         (response) => {
           console.log(term +" "+response);
           this.productosrelacionadosies = response }
@@ -31,7 +31,6 @@ productosrelacionadosies: Productos[]= [];
       this.productosrelacionadosies = [];
 
     }
-
   }
 
   onSelect(productosrelacionadosies: Productos): void{
