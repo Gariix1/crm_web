@@ -14,6 +14,8 @@ import { ProductosComponent } from './productos/form/productos.component';
 import { OportunidadComponent } from './oportunidad/oportunidad.component';
 import { ProspectComponent } from './prospect/prospect.component';
 import { CampaignComponent } from './campaign/campaign.component';
+import { PersonComboboxComponent } from './person/person-combobox/person-combobox.component';
+import { ProductosSearchComponent } from './productos/search/productos-search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CampaignComponent } from './campaign/campaign.component';
     ProductosListComponent,
     OportunidadComponent,
     CampaignComponent,
-    ProspectComponent
+    ProspectComponent,
+    PersonComboboxComponent,
+    ProductosSearchComponent
 
   ],
   imports: [
