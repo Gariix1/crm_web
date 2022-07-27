@@ -9,5 +9,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface ProspectRepository extends CrudRepository <Prospect,Long> {
     
     List<Prospect> findAll();
-    List<Prospect> findByNombreLikeIgnoreCase(String term);
+      List<Prospect> findByNombreLikeIgnoreCase(String term);  
 }

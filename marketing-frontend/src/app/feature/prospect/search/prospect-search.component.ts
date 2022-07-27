@@ -19,7 +19,6 @@ export class ProspectSearchComponent implements OnInit {
   }
 
   findByName(term: string):void {
-    
     if (term.length>=2){
       this.prospectService.findByName(term).subscribe(
         (response) => {
@@ -32,6 +31,7 @@ export class ProspectSearchComponent implements OnInit {
       this.prospects = [];
     }
     
+
   }
 
   onSelect(prospect: Prospect): void{

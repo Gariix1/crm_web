@@ -48,8 +48,16 @@ public class PersonController {
         return personService.findAll();
     }
 
+    /* @GetMapping("/findAll")
+    public List findAll(){
+        return personService.findAll();
+    } */
+
     @GetMapping("/findByName/{term}")
     public List<Person> findByName(@PathVariable String term){
         return personService.findByName(term+"%");
     }
+
+    
+    
 }
