@@ -7,5 +7,4 @@ export interface Productos {
   created: Date,
   updated: Date,
   enable: boolean
-
 }
