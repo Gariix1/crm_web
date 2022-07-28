@@ -1,5 +1,4 @@
 package edu.yavirac.oportunidadbackend.feature.person;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,6 @@ public class PersonController {
     @Autowired
     PersonService personService;
 //Create
-
-    //Create
     @PostMapping("/save")
     public Person save(@RequestBody Person person) {
         return personService.save(person);
@@ -51,16 +48,8 @@ public class PersonController {
         return personService.findAll();
     }
 
-    /* @GetMapping("/findAll")
-    public List findAll(){
-        return personService.findAll();
-    } */
-
     @GetMapping("/findByName/{term}")
     public List<Person> findByName(@PathVariable String term){
         return personService.findByName(term+"%");
     }
-
-    
-    
 }

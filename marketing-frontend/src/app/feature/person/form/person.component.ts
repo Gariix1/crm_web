@@ -11,7 +11,7 @@ export class PersonComponent implements OnInit {
   id:0,
   name:"",
   dni:"",
-  enable:false
+  enabled:false
 }
   constructor(
     private personService:PersonService,
@@ -40,7 +40,7 @@ export class PersonComponent implements OnInit {
           id:0,
           name: "",
           dni:"",
-          enable:false
+          enabled:false
         }
       }
     )
@@ -56,9 +56,8 @@ export class PersonComponent implements OnInit {
     )
    }
 
-
+   
 }
-
 
 /* id: 0,
 name: '' */

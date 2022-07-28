@@ -41,6 +41,5 @@ export class PersonService {
       return this.http.get<Person[]>(this.url+"/findByName/"+term, this.httpOptions);
     }
 
-    
 
 }

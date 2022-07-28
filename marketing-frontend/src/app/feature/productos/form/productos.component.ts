@@ -37,7 +37,7 @@ export class ProductosComponent implements OnInit {
       (response) => {
         console.log("registro guardado");
         this.currentProductos = this.resetProductos();
-        this.route.navigate(['/layaout.person-list']);
+        this.route.navigate(['/layout.person-list']);
 
       }
     )

@@ -1,7 +1,9 @@
 package edu.yavirac.oportunidadbackend.feature.person;
 
 import org.springframework.data.annotation.Id;
+
 import org.springframework.data.relational.core.mapping.Table;
+
 import lombok.Data;
 
 @Data
@@ -12,5 +14,6 @@ public class Person {
     private long id;
     private String name;
     private String dni;
-    private boolean enable;
+    private Boolean enabled;
+    
 }
