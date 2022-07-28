@@ -28,7 +28,11 @@ public class ProductosService {
 
     //registros de permiso en una sola a traves de una lista
 
-    public List<Productos>findAll(){
+    public List<Productos> findAll(){
         return productosRepository.findAll();
+    }
+
+    public List<Productos> findByName(String term){
+        return productosRepository.findByNombreLikeIgnoreCase(term+"%");
     }
 }

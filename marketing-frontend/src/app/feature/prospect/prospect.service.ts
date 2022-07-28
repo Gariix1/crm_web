@@ -40,4 +40,5 @@ export class ProspectService {
   public findByName(term: string):Observable<Prospect[]>{
     return this.http.get<Prospect[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
+
 }

@@ -27,4 +27,18 @@ export class OportunidadService{
   public findById(oportunidadId:number): Observable<Oportunidad>{
     return this.http.get<Oportunidad>(this.url+"/"+oportunidadId, this.httpOptions);
   }
+
+  //delete
+  /*public deleteById(id: number): Observable<void>{
+    console.log(id);
+    return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
+  }*/
+
+  public findAll():Observable<Oportunidad[]>{
+    return this.http.get<Oportunidad[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByDescripcion(term: string):Observable<Oportunidad[]>{
+    return this.http.get<Oportunidad[]>(this.url+"/findByDescripcion/"+term, this.httpOptions);
+  }
 }

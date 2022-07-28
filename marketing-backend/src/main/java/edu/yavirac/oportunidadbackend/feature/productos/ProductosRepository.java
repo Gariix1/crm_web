@@ -6,4 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 public interface ProductosRepository extends CrudRepository<Productos, Long>{
 
     List<Productos> findAll();
+
+    List<Productos> findByNombreLikeIgnoreCase(String term);
+
+
+
 }
